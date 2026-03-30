@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSM__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Customer Success Manager for follow-up Tasks when Cases close.</description>
+    <externalId>false</externalId>
+    <label>CSM</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Accounts_As_CSM</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Lookup</type>
+</CustomField>
