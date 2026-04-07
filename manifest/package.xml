@@ -32,10 +32,57 @@
         <name>Flow</name>
     </types>
     <types>
+        <members>Channel_Supervisor</members>
+        <members>Contract_Manager</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>Print_Co_Support_Group</members>
+        <name>PermissionSetGroup</name>
+    </types>
+    <types>
+        <members>Print_Co_Support_Group</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>PrintCo_Agent</members>
+        <name>PresenceUserConfig</name>
+    </types>
+    <types>
         <members>Escalation_Support</members>
         <members>Tier1_Support</members>
         <members>Tier2_Support</members>
         <name>Queue</name>
+    </types>
+    <types>
+        <members>PrintCo_Tier1_Routing</members>
+        <members>PrintCo_Tier2_Routing</members>
+        <name>QueueRoutingConfig</name>
+    </types>
+    <types>
+        <members>PrintCo_Case</members>
+        <name>ServiceChannel</name>
+    </types>
+    <types>
+        <members>PrintCo_Available</members>
+        <members>PrintCo_Busy</members>
+        <name>ServicePresenceStatus</name>
+    </types>
+    <types>
+        <members>PrintCo_GuestSite</members>
+        <name>StaticResource</name>
+    </types>
+    <types>
+        <members>printCoAccountHealth</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>PrintCo Support</members>
+        <name>Network</name>
+    </types>
+    <types>
+        <members>PrintCo_Support1</members>
+        <name>DigitalExperienceBundle</name>
     </types>
     <version>66.0</version>
 </Package>

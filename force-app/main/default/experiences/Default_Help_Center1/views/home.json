@@ -1,0 +1,46 @@
+{
+  "appPageId" : "63dd38fa-1db9-4447-a285-f054039f4e1c",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "4ce03047-b87c-42e8-a729-963e07983a9e",
+  "label" : "Home",
+  "regions" : [ {
+    "id" : "9c82704b-a841-45e6-861f-b057f149351b",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:printCoJetsonsHome",
+      "id" : "a1b2c3d4-5678-9abc-def0-111111111111",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1187944d-cd60-4be4-b4c3-43f26e361ad7",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "75036d74-5632-459a-8a52-afe6f5688e8c",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "PrintCo commercial printers — explore our product lineup, knowledge base, and contact support.",
+        "title" : "PrintCo — Commercial Print Systems"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "56a4271b-6a5b-4642-b02f-ba2d13ee3942",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d8a356b2-3b69-4b43-849b-cf02b6c126a2",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Home",
+  "type" : "view",
+  "viewType" : "home"
+}

@@ -1,0 +1,31 @@
+.pc-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.pc-badge-tier {
+    --slds-c-badge-color-background: #e0f2fe;
+    --slds-c-badge-text-color: #0369a1;
+}
+
+.pc-badge-status {
+    --slds-c-badge-color-background: #f1f5f9;
+    --slds-c-badge-text-color: #334155;
+}
+
+.pc-priority {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 0.25rem;
+    border-left: 3px solid #0ea5e9;
+}
+
+.pc-priority-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pc-priority-badge {
+    font-weight: 600;
+}

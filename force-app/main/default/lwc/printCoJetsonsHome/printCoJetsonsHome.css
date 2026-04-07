@@ -1,0 +1,366 @@
+/* ── Root ────────────────────────────────────────── */
+:host {
+    display: block;
+    --pc-brand: #0070d2;
+    --pc-brand-dark: #005bb5;
+    --pc-brand-light: #e8f4fd;
+    --pc-accent: #ff6d00;
+    --pc-text: #16325c;
+    --pc-text-light: #54698d;
+    --pc-bg: #ffffff;
+    --pc-bg-alt: #f4f6f9;
+    --pc-border: #d8dde6;
+    --pc-radius: 0.5rem;
+    --pc-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --pc-shadow-lg: 0 6px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Salesforce Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--pc-text);
+}
+
+.pc-root {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* ── Hero ────────────────────────────────────────── */
+.pc-hero {
+    background: linear-gradient(135deg, #0070d2 0%, #1b3a5c 50%, #16325c 100%);
+    color: #fff;
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+    position: relative;
+}
+.pc-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--pc-brand), var(--pc-accent), var(--pc-brand));
+}
+.pc-hero-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.pc-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.35rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+.pc-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+    letter-spacing: -0.02em;
+}
+.pc-subtitle {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+}
+.pc-hero-actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ── Buttons ─────────────────────────────────────── */
+.pc-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--pc-radius);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+    text-decoration: none;
+}
+.pc-btn-primary {
+    background: var(--pc-accent);
+    color: #fff;
+    border-color: var(--pc-accent);
+}
+.pc-btn-primary:hover {
+    background: #e65c00;
+    border-color: #e65c00;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 109, 0, 0.35);
+}
+.pc-btn-outline {
+    background: transparent;
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+.pc-btn-outline:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #fff;
+}
+.pc-btn-full {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1rem;
+}
+
+/* ── Stats Bar ───────────────────────────────────── */
+.pc-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background: var(--pc-bg);
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--pc-border);
+}
+.pc-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+}
+.pc-stat-num {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--pc-brand);
+}
+.pc-stat-label {
+    font-size: 0.78rem;
+    color: var(--pc-text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 0.2rem;
+}
+
+/* ── Sections ────────────────────────────────────── */
+.pc-section {
+    padding: 3.5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.pc-section-alt {
+    background: var(--pc-bg-alt);
+    max-width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.pc-section-alt > * {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pc-section-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--pc-text);
+    margin: 0 0 0.5rem;
+    text-align: center;
+}
+.pc-section-sub {
+    color: var(--pc-text-light);
+    font-size: 1.05rem;
+    text-align: center;
+    margin: 0 auto 2.5rem;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+/* ── Product Grid ────────────────────────────────── */
+.pc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+}
+.pc-card {
+    background: var(--pc-bg);
+    border: 1px solid var(--pc-border);
+    border-radius: var(--pc-radius);
+    padding: 1.5rem;
+    position: relative;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.pc-card:hover {
+    box-shadow: var(--pc-shadow-lg);
+    transform: translateY(-3px);
+}
+.pc-badge {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: var(--pc-accent);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 2rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.pc-card-sku {
+    font-size: 0.72rem;
+    color: var(--pc-text-light);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+}
+.pc-card-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 0.4rem;
+    color: var(--pc-text);
+}
+.pc-card-price {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--pc-brand);
+    margin-bottom: 0.5rem;
+}
+.pc-card-desc {
+    font-size: 0.85rem;
+    color: var(--pc-text-light);
+    line-height: 1.5;
+    margin: 0 0 0.75rem;
+}
+.pc-card-family {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.2rem 0.6rem;
+    border-radius: 2rem;
+    background: var(--pc-brand-light);
+    color: var(--pc-brand);
+}
+
+/* ── Knowledge Grid ──────────────────────────────── */
+.pc-kb-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+}
+.pc-kb-card {
+    background: var(--pc-bg);
+    border: 1px solid var(--pc-border);
+    border-radius: var(--pc-radius);
+    padding: 1.75rem 1.5rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.pc-kb-card:hover {
+    box-shadow: var(--pc-shadow-lg);
+    transform: translateY(-3px);
+}
+.pc-kb-icon {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+.pc-kb-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    color: var(--pc-text);
+    line-height: 1.35;
+}
+.pc-kb-summary {
+    font-size: 0.85rem;
+    color: var(--pc-text-light);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ── Support Form ────────────────────────────────── */
+.pc-form-container {
+    max-width: 560px;
+    margin: 0 auto;
+    background: var(--pc-bg);
+    border: 1px solid var(--pc-border);
+    border-radius: var(--pc-radius);
+    padding: 2rem;
+    box-shadow: var(--pc-shadow);
+}
+.pc-field {
+    margin-bottom: 1.25rem;
+}
+.pc-label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--pc-text);
+    margin-bottom: 0.35rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+.pc-input,
+.pc-textarea {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid var(--pc-border);
+    border-radius: 0.35rem;
+    font-size: 0.95rem;
+    color: var(--pc-text);
+    background: var(--pc-bg);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+.pc-input:focus,
+.pc-textarea:focus {
+    outline: none;
+    border-color: var(--pc-brand);
+    box-shadow: 0 0 0 3px rgba(0, 112, 210, 0.15);
+}
+.pc-textarea {
+    resize: vertical;
+}
+
+/* ── Footer ──────────────────────────────────────── */
+.pc-footer {
+    background: #16325c;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    font-size: 0.82rem;
+}
+.pc-footer p {
+    margin: 0;
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 768px) {
+    .pc-title {
+        font-size: 2rem;
+    }
+    .pc-hero {
+        padding: 3rem 1.25rem 2.5rem;
+    }
+    .pc-stats {
+        gap: 1rem;
+    }
+    .pc-stat {
+        min-width: 80px;
+    }
+    .pc-stat-num {
+        font-size: 1.25rem;
+    }
+    .pc-section {
+        padding: 2.5rem 1.25rem;
+    }
+    .pc-grid,
+    .pc-kb-grid {
+        grid-template-columns: 1fr;
+    }
+}

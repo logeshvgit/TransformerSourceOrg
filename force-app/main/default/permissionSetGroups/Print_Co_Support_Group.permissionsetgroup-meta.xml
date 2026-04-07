@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>PrintCo service team: combines Contract Manager and Channel Supervisor.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Print Co Support Group</label>
+    <permissionSets>Contract_Manager</permissionSets>
+    <permissionSets>Channel_Supervisor</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

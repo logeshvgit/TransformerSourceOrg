@@ -1,0 +1,82 @@
+<template>
+    <div class="pc-root">
+
+        <!-- Stats -->
+        <div class="pc-stats">
+            <div class="pc-stat"><span class="pc-stat-num">100+</span><span class="pc-stat-label">Pages / min</span></div>
+            <div class="pc-stat"><span class="pc-stat-num">4 hr</span><span class="pc-stat-label">Gold SLA response</span></div>
+            <div class="pc-stat"><span class="pc-stat-num">10</span><span class="pc-stat-label">Product lineup</span></div>
+            <div class="pc-stat"><span class="pc-stat-num">24/7</span><span class="pc-stat-label">Remote diagnostics</span></div>
+        </div>
+
+        <!-- Products -->
+        <section class="pc-section" data-id="printers">
+            <h2 class="pc-section-heading">Printer &amp; Product Lineup</h2>
+            <p class="pc-section-sub">From flagship production presses to consumables — everything your print operation needs.</p>
+            <div class="pc-grid">
+                <template for:each={products} for:item="prod">
+                    <div key={prod.id} class="pc-card">
+                        <template if:true={prod.badge}>
+                            <span class="pc-badge">{prod.badge}</span>
+                        </template>
+                        <div class="pc-card-sku">{prod.sku}</div>
+                        <h3 class="pc-card-name">{prod.name}</h3>
+                        <div class="pc-card-price">{prod.price}</div>
+                        <p class="pc-card-desc">{prod.desc}</p>
+                        <span class="pc-card-family">{prod.family}</span>
+                    </div>
+                </template>
+            </div>
+        </section>
+
+        <!-- Knowledge -->
+        <section class="pc-section pc-section-alt" data-id="knowledge">
+            <h2 class="pc-section-heading">Knowledge Base</h2>
+            <p class="pc-section-sub">Self-service articles to keep your fleet running at peak performance.</p>
+            <div class="pc-kb-grid">
+                <template for:each={articles} for:item="art">
+                    <div key={art.id} class="pc-kb-card">
+                        <span class="pc-kb-icon">{art.icon}</span>
+                        <h3 class="pc-kb-title">{art.title}</h3>
+                        <p class="pc-kb-summary">{art.summary}</p>
+                    </div>
+                </template>
+            </div>
+        </section>
+
+        <!-- Contact Support -->
+        <section class="pc-section" data-id="support">
+            <h2 class="pc-section-heading">Contact Support</h2>
+            <p class="pc-section-sub">Submit a support ticket and our team will respond within your SLA window.</p>
+            <div class="pc-form-container">
+                <form action={formActionUrl} method="POST">
+                    <input type="hidden" name="orgid" value={orgId} />
+                    <input type="hidden" name="retURL" value={returnUrl} />
+
+                    <div class="pc-field">
+                        <label class="pc-label" for="w2c-name">Full Name</label>
+                        <input class="pc-input" type="text" id="w2c-name" name="name" required="" placeholder="Your full name" />
+                    </div>
+                    <div class="pc-field">
+                        <label class="pc-label" for="w2c-email">Email</label>
+                        <input class="pc-input" type="email" id="w2c-email" name="email" required="" placeholder="you@company.com" />
+                    </div>
+                    <div class="pc-field">
+                        <label class="pc-label" for="w2c-subject">Subject</label>
+                        <input class="pc-input" type="text" id="w2c-subject" name="subject" required="" placeholder="Brief summary of the issue" />
+                    </div>
+                    <div class="pc-field">
+                        <label class="pc-label" for="w2c-desc">Description</label>
+                        <textarea class="pc-textarea" id="w2c-desc" name="description" rows="4" required="" placeholder="Describe the issue in detail..."></textarea>
+                    </div>
+                    <button class="pc-btn pc-btn-primary pc-btn-full" type="submit">Submit Ticket</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="pc-footer">
+            <p>&copy; 2026 PrintCo — Enterprise Print Solutions &nbsp;|&nbsp; Powered by Salesforce Service Cloud</p>
+        </footer>
+    </div>
+</template>
